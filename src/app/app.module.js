@@ -17,6 +17,7 @@ angular.module('mosquito', [
   'angularModalService',
   'angularSpinner',
   'ngBootbox',
+  'ngMap',
   config.name,
   components.name,
   sections.name

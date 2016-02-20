@@ -8,6 +8,11 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 @import "icons";
 @import "styles/mosquito";
 
+html, body {
+  min-height: 100%;
+  height: 100vh;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
