@@ -8,7 +8,7 @@ let templates = {};
 /* TEMPLATES */
 
 let callback = () => {
-  angular.bootstrap(window.document, ["mosquitomapWww"]);
+  angular.bootstrap(window.document, ["mosquito"]);
   callback = () => {};
 }
 

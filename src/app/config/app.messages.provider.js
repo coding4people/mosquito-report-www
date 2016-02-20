@@ -7,7 +7,7 @@ export default class MessageProvider {
   }
 
   loadMessages (locale) {
-    return require('json!yaml!../../locales/' + locale + '.yml').vaniday;
+    return require('json!yaml!../../locales/' + locale + '.yml').mosquito;
   }
 
   $get() {

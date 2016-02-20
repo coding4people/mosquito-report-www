@@ -38,7 +38,7 @@ module.exports = function(srcFiles, partialsDest) {
         cb();
       }))
       .pipe(angularTemplatecache('templateCacheHtml' + localeExt + '.js', {
-        module: 'vanidayMerchant',
+        module: 'mosquito',
         root: 'app'
       }))
       .pipe(gulp.dest(partialsDest))

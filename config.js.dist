@@ -5,19 +5,9 @@ module.exports = {
     baseUrl:'@@FRONT_API_URL',
     dateFormat: 'YYYY-MM-DD H:mm:ss'
   },
-  notifications: {
-    baseUrl: '@@NOTIFICATION_API_URL',
-    wsUrl: '@@NOTIFICATION_WS_URL'
-  },
-  pictureBaseUrl: '@@PICTURE_BASE_URL',
   gMapsToken: '@@GMAPS_TOKEN',
-  facebookAppId: '@@FRONT_FACEBOOK_ID',
   debug: '@@DEBUG',
-  websocket: ('@@WEBSOCKET' === "true"),
-  gtm: '@@GTM',
   environment: '@@ENVIRONMENT',
-  newRelic: '@@NEW_RELIC',
-  assetsUrl: '@@ASSETS_URL',
   languages:{
     'default': {
       locale:'en_us',
@@ -32,106 +22,8 @@ module.exports = {
       dateFormat: {
         date: 'DD/MM/YYYY',
         time: 'HH:mm',
-        dateTime: 'DD/MM h:mm a',
-        calendarColumnHeader: 'ddd D',
-        calendarTitle: 'MMMM D',
-        calendarDetails: 'dddd, DD MMMM YYYY'
+        dateTime: 'DD/MM h:mm a'
       }
-    },
-    'ae':{
-      locale:'en_ae',
-      fbLocale:'en_AE',
-      ietf:'en-ae',
-      iso2:'ae',
-      language: 'en',
-      currencyIso:'AED',
-      country: 'UAE',
-      gtm: 'GTM-T6GW7X',
-      countrySlug: 'uae',
-      dateFormat: {
-        date: 'DD/MM/YYYY',
-        time: 'HH:mm',
-        dateTime: 'DD/MM h:mm a',
-        calendarColumnHeader: 'ddd D',
-        calendarTitle: 'MMMM D',
-        calendarDetails: 'dddd, MMMM DD, YYYY'
-      }
-    },
-    'au':{
-      locale:'en_au',
-      fbLocale:'en_AU',
-      ietf:'en-au',
-      iso2:'au',
-      language: 'en',
-      currencyIso:'AUD',
-      country: 'Australia',
-      gtm: 'GTM-T6GW7X',
-      countrySlug: 'australia'
-    },
-    'uk':{
-      locale:'en_gb',
-      fbLocale:'en_GB',
-      ietf:'en-gb',
-      iso2:'gb',
-      currencyIso:'GBP',
-      language: 'en',
-      country: 'United Kingdom',
-      gtm: 'GTM-T6GW7X',
-      countrySlug: 'united-kingdom'
-    },
-    'ru':{
-      locale:'ru_ru',
-      fbLocale:'ru_RU',
-      ietf:'ru-ru',
-      iso2:'ru',
-      language: 'ru',
-      momentLocale: 'ru',
-      currencyIso:'RUB',
-      country: 'RUS',
-      gtm: 'GTM-T6GW7X',
-      countrySlug: 'rus'
-    },
-    'it':{
-      locale:'it_it',
-      fbLocale:'it_IT',
-      ietf:'it-it',
-      iso2:'it',
-      language: 'it',
-      momentLocale: 'it',
-      currencyIso:'EUR',
-      country: 'Italy',
-      gtm: 'GTM-T6GW7X',
-      countrySlug: 'italy'
-    },
-    'sg':{
-      locale:'en_sg',
-      fbLocale:'en_SG',
-      ietf:'en-sg',
-      iso2:'sg',
-      language: 'en',
-      currencyIso:'SGD',
-      country: 'SGD',
-      gtm: 'GTM-T6GW7X',
-      countrySlug: 'sgd',
-      dateFormat: {
-        date: 'DD/MM/YYYY',
-        time: 'HH:mm',
-        dateTime: 'DD/MM h:mm a',
-        calendarColumnHeader: 'ddd D',
-        calendarTitle: 'MMMM D',
-        calendarDetails: 'dddd, MMMM DD, YYYY'
-      }
-    },
-    'br':{
-      locale:'pt_br',
-      fbLocale:'pt_BR',
-      ietf:'pt-br',
-      momentLocale: 'pt-br',
-      iso2:'br',
-      currencyIso:'BRL',
-      language: 'pt',
-      country: 'Brazil',
-      countrySlug: 'brazil'
     }
   }
 };
