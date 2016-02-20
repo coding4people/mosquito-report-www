@@ -1,5 +1,9 @@
-export default class MainController {
-  constructor () {
+export default class ServicesController {
+  constructor() {
     'ngInject';
+  }
+
+  x() {
+    return true;
   }
 }

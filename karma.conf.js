@@ -7,7 +7,7 @@ var _ = require('lodash');
 var wiredep = require('wiredep');
 
 var pathSrcHtml = [
-  path.join(conf.paths.src, '/**/*.html')
+  path.join(conf.paths.tmp, '/serve/app/**/*.html')
 ];
 
 function listFiles() {
@@ -18,7 +18,8 @@ function listFiles() {
 
   var patterns = wiredep(wiredepOptions).js
     .concat([
-      path.join(conf.paths.tmp, '/serve/app/index.module.js'),
+      path.join(conf.paths.src, '/app/**/*.spec.js'),
+      path.join(conf.paths.tmp, '/serve/app/index.module.js')
     ])
     .concat(pathSrcHtml);
 
@@ -46,8 +47,8 @@ module.exports = function(config) {
     autoWatch: false,
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: conf.paths.src + '/',
-      moduleName: 'mosquitomapWww'
+      stripPrefix: conf.paths.tmp + '/serve/',
+      moduleName: 'mosquito'
     },
 
     logLevel: 'WARN',
