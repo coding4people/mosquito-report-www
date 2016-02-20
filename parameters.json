@@ -1,0 +1,16 @@
+{
+  "AUTH_TYPE":              "Restricted",
+  "FRONT_API_URL":          "http://merchant-api.stg.vaniday.net.br",
+  "NOTIFICATION_API_URL":   "http://vaniday-notifications.stg.vaniday.net.br",
+  "NOTIFICATION_WS_URL":    "ws://vaniday-notifications-ws.stg.vaniday.net.br?access_token=",
+  "PICTURE_BASE_URL":       "http://thumbor.stg.vaniday.net.br/unsafe/#RES#/smart/photos.beauty.com.br/",
+  "FRONT_FACEBOOK_ID":      "356542861200660",
+  "GMAPS_TOKEN":            "AIzaSyC8zvFZXibDcyjrbq4o6u8jk7o2cxNpqUo",
+  "GTM":                    "GTM-NR4PQC",
+  "ENVIRONMENT":            "LOCAL",
+  "NEW_RELIC":              "7782089",
+  "ASSETS_URL":             "",
+  "DEBUG":                  "true",
+  "WEBSOCKET":              "true",
+  "BUCKET":                 "s3://localhost/"
+}

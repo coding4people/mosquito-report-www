@@ -9,8 +9,7 @@ var webpack = require('webpack-stream');
 
 var $ = require('gulp-load-plugins')();
 
-
-function webpackWrapper(watch, test, callback) {
+function webpackWrapper(watch, callback) {
   var webpackOptions = {
     watch: watch,
     module: {
@@ -41,28 +40,35 @@ function webpackWrapper(watch, test, callback) {
     }
   };
 
-  var sources = [ path.join(conf.paths.src, '/app/index.module.js') ];
-  if (test) {
-    sources.push(path.join(conf.paths.src, '/app/**/*.spec.js'));
-  }
+  var sources = [ path.join(conf.paths.src, '/app/app.module.js') ];
 
   return gulp.src(sources)
     .pipe(webpack(webpackOptions, null, webpackChangeHandler))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
 }
+gulp.task('scripts:templates', function () {
+  return gulp.src(path.join(conf.paths.src, '/partials/templateCacheHtml.js'))
+    .pipe(webpack({
+      module: {
+        loaders: [{ test: /\.js$/, exclude: /node_modules/, loaders: ['ng-annotate', 'babel-loader']}]
+      },
+      output: { filename: 'templateCacheHtml.js' }
+    }))
+    .pipe(gulp.dest(conf.paths.tmp));
+});
 
-gulp.task('scripts', function () {
-  return webpackWrapper(false, false);
+gulp.task('scripts', ['scripts:templates'], function () {
+  return webpackWrapper(false);
 });
 
 gulp.task('scripts:watch', ['scripts'], function (callback) {
-  return webpackWrapper(true, false, callback);
+  return webpackWrapper(true, callback);
 });
 
 gulp.task('scripts:test', function () {
-  return webpackWrapper(false, true);
+  return webpackWrapper(false);
 });
 
 gulp.task('scripts:test-watch', ['scripts'], function (callback) {
-  return webpackWrapper(true, true, callback);
+  return webpackWrapper(true, callback);
 });

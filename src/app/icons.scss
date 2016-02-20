@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "icons";
+  src: url('../assets/fonts/icons7700.eot');
+  src: url('../assets/fonts/icons7700.eot?#iefix') format('eot'),
+  url('../assets/fonts/icons7700.woff') format('woff'),
+  url('../assets/fonts/icons7700.ttf') format('truetype'),
+  url('../assets/fonts/icons7700.svg#icons7700') format('svg');
+}
+
+.icon {
+  font-family: "icons";
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+@if $filename == account-multiple {
+$char: "\E001";
+}
+@if $filename == calendar {
+$char: "\E002";
+}
+@if $filename == check {
+$char: "\E003";
+}
+@if $filename == close {
+$char: "\E004";
+}
+@if $filename == dots-vertical {
+$char: "\E005";
+}
+@if $filename == file-document-box {
+$char: "\E006";
+}
+@if $filename == format-list-numbers {
+$char: "\E007";
+}
+@if $filename == keyboard-backspace {
+$char: "\E008";
+}
+@if $filename == left {
+$char: "\E009";
+}
+@if $filename == magnify {
+$char: "\E00A";
+}
+@if $filename == menu {
+$char: "\E00B";
+}
+@if $filename == right {
+$char: "\E00C";
+}
+@if $filename == settings {
+$char: "\E00D";
+}
+@if $filename == web {
+$char: "\E00E";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+  &:#{$insert} {
+  content: icon-char($filename);
+}
+}
+
+.icon-account-multiple {
+  @include icon(account-multiple);
+}
+.icon-calendar {
+  @include icon(calendar);
+}
+.icon-check {
+  @include icon(check);
+}
+.icon-close {
+  @include icon(close);
+}
+.icon-dots-vertical {
+  @include icon(dots-vertical);
+}
+.icon-file-document-box {
+  @include icon(file-document-box);
+}
+.icon-format-list-numbers {
+  @include icon(format-list-numbers);
+}
+.icon-keyboard-backspace {
+  @include icon(keyboard-backspace);
+}
+.icon-left {
+  @include icon(left);
+}
+.icon-magnify {
+  @include icon(magnify);
+}
+.icon-menu {
+  @include icon(menu);
+}
+.icon-right {
+  @include icon(right);
+}
+.icon-settings {
+  @include icon(settings);
+}
+.icon-web {
+  @include icon(web);
+}

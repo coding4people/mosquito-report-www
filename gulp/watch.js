@@ -25,8 +25,9 @@ gulp.task('watch', ['scripts:watch', 'inject'], function () {
     }
   });
 
+  gulp.watch([path.join(conf.paths.src, '/app/**/*.html'), path.join(conf.paths.src, '/locales/**/*.yml')], ['partials']);
 
-  gulp.watch(path.join(conf.paths.src, '/app/**/*.html'), function(event) {
-    browserSync.reload(event.path);
-  });
+  //gulp.watch(path.join(conf.paths.src, '/app/**/*.html'), function(event) {
+  //  browserSync.reload(event.path);
+  //});
 });
