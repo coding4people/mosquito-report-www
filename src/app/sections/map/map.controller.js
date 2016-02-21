@@ -1,7 +1,9 @@
 export default class MapController {
-  constructor(NgMap) {
+  constructor(NgMap, MapService) {
     'ngInject';
 
+    this.mapStyle = MapService.getMapStyle();
+    
     var vm = this;
     vm.dynMarkers = [];
     NgMap.getMap().then(function(map) {
