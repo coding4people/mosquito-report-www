@@ -1,8 +1,11 @@
 <div class="section-container">
-
   <ng-map class="section-map"
           zoom="2"
           styles="{{mapController.mapStyle}}"
+          pan-control="false"
+          map-type-control="false"
+          zoom-control="false"
           center="[43.6650000, -79.4103000]"></ng-map>
 
+  <a class="btn btn-primary btn-lg btn-add-focus" href="">{{ 'sections.map.addFocus' | translate }}</a>
 </div>

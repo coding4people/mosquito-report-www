@@ -1,2 +1,5 @@
 mosquito:
-  title: 'Mosquito Test'
+  sections:
+    map:
+      addFocus: 'Add a Focus Report'
+

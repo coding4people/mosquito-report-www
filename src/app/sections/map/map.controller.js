@@ -3,7 +3,7 @@ export default class MapController {
     'ngInject';
 
     this.mapStyle = MapService.getMapStyle();
-    
+
     var vm = this;
     vm.dynMarkers = [];
     NgMap.getMap().then(function(map) {
