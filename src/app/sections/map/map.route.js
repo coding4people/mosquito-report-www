@@ -5,12 +5,12 @@ export default function routerConfig ($stateProvider, CurrentLocaleProvider) {
 
   $stateProvider
     .state('sections.main', {
-      url: '/main',
+      url: '/map',
       views: {
         '@sections': {
-          templateUrl: `app/sections/main/main.${lang}.html`,
-          controller: 'MainController',
-          controllerAs: 'mainController'
+          templateUrl: `app/sections/map/map.${lang}.html`,
+          controller: 'MapController',
+          controllerAs: 'mapController'
         }
       }
     });

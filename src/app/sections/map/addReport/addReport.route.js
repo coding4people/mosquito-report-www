@@ -4,13 +4,13 @@ export default function routerConfig ($stateProvider, CurrentLocaleProvider) {
   let lang = CurrentLocaleProvider.currentLocale.locale;
 
   $stateProvider
-    .state('sections.main', {
-      url: '/main',
+    .state('sections.map.addReport', {
+      url: '/add-report',
       views: {
         '@sections': {
-          templateUrl: `app/sections/main/main.${lang}.html`,
-          controller: 'MainController',
-          controllerAs: 'mainController'
+          templateUrl: `app/sections/map/addReport/map.${lang}.html`,
+          controller: 'AddReportController',
+          controllerAs: 'addReportController'
         }
       }
     });

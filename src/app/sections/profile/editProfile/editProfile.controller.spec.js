@@ -4,7 +4,7 @@ describe('MainController', function() {
   beforeEach(module('mosquito'));
 
   beforeEach(inject(function($controller) {
-    controller = $controller('MainController');
+    controller = $controller('EditProfileController');
   }));
 
   describe('x()', function() {

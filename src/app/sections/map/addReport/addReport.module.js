@@ -1,6 +1,6 @@
-import MainController from './main.controller';
-import mainRoute from './main.route';
+import controller from './addReport.controller';
+import routeConfig from './addReport.route';
 
-export default angular.module('mosquito.sections.main', [])
-  .config(mainRoute)
-  .controller('MainController', MainController);
+export default angular.module('mosquito.sections.map.addReport', [])
+  .config(routeConfig)
+  .controller('AddReportController', controller);

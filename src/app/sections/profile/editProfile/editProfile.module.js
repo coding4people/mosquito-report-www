@@ -1,6 +1,6 @@
-import MainController from './main.controller';
-import mainRoute from './main.route';
+import controller from './editProfile.controller';
+import routeConfig from './editProfile.route';
 
-export default angular.module('mosquito.sections.main', [])
+export default angular.module('mosquito.sections.profile.editProfile', [])
   .config(mainRoute)
-  .controller('MainController', MainController);
+  .controller('EditProfileController', controller);

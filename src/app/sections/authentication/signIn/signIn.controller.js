@@ -1,5 +1,5 @@
 export default class SignInController {
-  constructor(NgMap) {
+  constructor() {
     'ngInject';
   }
 

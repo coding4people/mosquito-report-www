@@ -1,5 +1,5 @@
 export default class ServicesController {
-  constructor(NgMap) {
+  constructor() {
     'ngInject';
   }
 

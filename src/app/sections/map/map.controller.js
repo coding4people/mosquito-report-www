@@ -1,4 +1,4 @@
-export default class ServicesController {
+export default class MapController {
   constructor(NgMap) {
     'ngInject';
 
