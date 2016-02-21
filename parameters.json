@@ -1,5 +1,5 @@
 {
-  "FRONT_API_URL":          "URL",
+  "FRONT_API_URL":          "http://api.mosquito.report",
   "GMAPS_TOKEN":            "token",
   "ENVIRONMENT":            "LOCAL",
   "DEBUG":                  "true"
