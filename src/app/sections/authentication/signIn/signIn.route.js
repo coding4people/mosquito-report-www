@@ -4,13 +4,13 @@ export default function routerConfig ($stateProvider, CurrentLocaleProvider) {
   let lang = CurrentLocaleProvider.currentLocale.locale;
 
   $stateProvider
-    .state('sections.main', {
-      url: '/main',
+    .state('authentication.signIn', {
+      url: '/sign-in',
       views: {
-        '@sections': {
-          templateUrl: `app/sections/main/main.${lang}.html`,
-          controller: 'MainController',
-          controllerAs: 'mainController'
+        'authentication-section': {
+          templateUrl: `app/sections/authentication/signIn/signIn.${lang}.html`,
+          controller: 'SignInController',
+          controllerAs: 'signinController'
         }
       }
     });

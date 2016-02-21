@@ -1,6 +1,6 @@
-import MainController from './main.controller';
-import mainRoute from './main.route';
+import controller from './signIn.controller';
+import routeConfig from './signIn.route';
 
-export default angular.module('mosquito.sections.main', [])
-  .config(mainRoute)
-  .controller('MainController', MainController);
+export default angular.module('mosquito.sections.authentication.signIn', [])
+  .config(routeConfig)
+  .controller('SignInController', controller);
