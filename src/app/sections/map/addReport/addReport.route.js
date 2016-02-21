@@ -8,7 +8,7 @@ export default function routerConfig ($stateProvider, CurrentLocaleProvider) {
       url: '/add-report',
       views: {
         '@sections': {
-          templateUrl: `app/sections/map/addReport/map.${lang}.html`,
+          templateUrl: `app/sections/map/addReport/addReport.${lang}.html`,
           controller: 'AddReportController',
           controllerAs: 'addReportController'
         }
