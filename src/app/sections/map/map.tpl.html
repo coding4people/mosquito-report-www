@@ -1,4 +1,7 @@
-<div class="section-container">
+<div class="section-container"
+     us-spinner
+     spinner-theme="white"
+     spinner-on="mapController.isLoading">
   <ng-map class="section-map"
           zoom="2"
           styles="{{mapController.mapStyle}}"
@@ -6,6 +9,10 @@
           map-type-control="false"
           zoom-control="false"
           center="[43.6650000, -79.4103000]"></ng-map>
+
+  <a class="btn btn-circle btn-my-location" ng-click="mapController.getCurrentPosition()">
+    <i class="icon icon-my-location"></i>
+  </a>
 
   <a class="btn btn-primary btn-lg btn-add-focus" ui-sref="sections.map.addReport">
     {{ 'sections.map.addFocus' | translate }}

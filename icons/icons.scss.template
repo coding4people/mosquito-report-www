@@ -9,6 +9,7 @@
 
 .icon {
   font-family: "icons";
+  font-style: normal;
 }
 
 @function icon-char($filename) {

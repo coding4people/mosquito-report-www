@@ -1,14 +1,15 @@
 @font-face {
   font-family: "icons";
-  src: url('../assets/fonts/icons7700.eot');
-  src: url('../assets/fonts/icons7700.eot?#iefix') format('eot'),
-  url('../assets/fonts/icons7700.woff') format('woff'),
-  url('../assets/fonts/icons7700.ttf') format('truetype'),
-  url('../assets/fonts/icons7700.svg#icons7700') format('svg');
+  src: url('../assets/fonts/icons9634.eot');
+  src: url('../assets/fonts/icons9634.eot?#iefix') format('eot'),
+  url('../assets/fonts/icons9634.woff') format('woff'),
+  url('../assets/fonts/icons9634.ttf') format('truetype'),
+  url('../assets/fonts/icons9634.svg#icons9634') format('svg');
 }
 
 .icon {
   font-family: "icons";
+  font-style: normal;
 }
 
 @function icon-char($filename) {
@@ -47,14 +48,17 @@ $char: "\E00A";
 @if $filename == menu {
 $char: "\E00B";
 }
-@if $filename == right {
+@if $filename == my-location {
 $char: "\E00C";
 }
-@if $filename == settings {
+@if $filename == right {
 $char: "\E00D";
 }
-@if $filename == web {
+@if $filename == settings {
 $char: "\E00E";
+}
+@if $filename == web {
+$char: "\E00F";
 }
 
 @return $char;
@@ -98,6 +102,9 @@ $char: "\E00E";
 }
 .icon-menu {
   @include icon(menu);
+}
+.icon-my-location {
+  @include icon(my-location);
 }
 .icon-right {
   @include icon(right);

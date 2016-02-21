@@ -1,5 +1,5 @@
 export default function spinnerConfig (usSpinnerConfigProvider) {
   'ngInject';
 
-  usSpinnerConfigProvider.setTheme('smallRed', {color: 'red', radius: 6});
+  usSpinnerConfigProvider.setTheme('white', {color: 'white', radius: 6});
 }

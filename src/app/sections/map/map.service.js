@@ -1,9 +1,14 @@
 export default class MapService {
-  constructor() {
+  constructor(Restangular) {
     'ngInject';
+
+    this.Restangular = Restangular;
   }
 
-  getZoneFocus() {
-
+  getZoneFocus(latitude, longitude) {
+    // TODO @infodark -- change this to square method
+    return this.Restangular.one(`focus/query`).customPOST({
+      latlon: `${latitude},${longitude}`
+    });
   }
 }

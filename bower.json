@@ -36,9 +36,7 @@
     },
     "ngmap": {
       "main": [
-        "build/scripts/ng-map.min.js",
-        "testapp/scripts/markerclusterer.js",
-        "testapp/scripts/markers.js"
+        "build/scripts/ng-map.min.js"
       ]
     }
   },

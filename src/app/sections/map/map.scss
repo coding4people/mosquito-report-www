@@ -9,3 +9,14 @@
   width: 100%;
   border-radius: 0;
 }
+
+.btn-my-location {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  font-size: 40px;
+  .icon {
+    position: relative;
+    top: 3px;
+  }
+}
