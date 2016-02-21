@@ -1,4 +1,4 @@
-export default class MapService {
+export default class MapHelperService {
   constructor(MapStyle) {
     'ngInject';
 

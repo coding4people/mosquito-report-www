@@ -1,5 +1,5 @@
-import map from './map/map.module';
+import mapHelper from './mapHelper/mapHelper.module';
 
 export default angular.module('mosquito.components', [
-  map.name
+  mapHelper.name
 ]);

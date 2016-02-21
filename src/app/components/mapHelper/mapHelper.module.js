@@ -1,6 +1,6 @@
 import * as StyleConstants from './constants/mapStyle.constant';
-import service from './map.service';
+import service from './mapHelper.service';
 
-export default angular.module('mosquito.components.map', [])
-  .service('MapService', service)
+export default angular.module('mosquito.components.mapHelper', [])
+  .service('MapHelperService', service)
   .value('MapStyle', StyleConstants.MAP_STYLE);
