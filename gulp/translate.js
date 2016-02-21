@@ -31,7 +31,7 @@ module.exports = function(srcFiles, partialsDest) {
     var localeExt = '.' + path.relative(file.base, file.path).replace(/\..+$/, '');
 
     gulp.src(srcFiles)
-      .pipe(replace(yaml.load(file.contents).vaniday, localeExt))
+      .pipe(replace(yaml.load(file.contents).mosquito, localeExt))
       .pipe(through2.obj(function(file, enc, cb) {
         translate.push(file);
         this.push(file.clone());
