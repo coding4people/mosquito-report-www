@@ -4,7 +4,7 @@ export default function routerConfig ($stateProvider, CurrentLocaleProvider) {
   let lang = CurrentLocaleProvider.currentLocale.locale;
 
   $stateProvider
-    .state('sections.main', {
+    .state('sections.map', {
       url: '/map',
       views: {
         '@sections': {

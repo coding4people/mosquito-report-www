@@ -3,7 +3,7 @@ describe('MainController', function() {
 
   beforeEach(module('mosquito'));
 
-  beforeEach(inject(function($controller) {
+  beforeEach(inject(function(_$rootScope_, $controller) {
     controller = $controller('ProfileController');
   }));
 

@@ -1,3 +1,11 @@
-/**
- * Created by infodark on 2/21/16.
- */
+export default class MapService {
+  constructor(MapStyle) {
+    'ngInject';
+
+    this.MapStyle = MapStyle;
+  }
+
+  getMapStyle() {
+    return this.MapStyle;
+  }
+}
