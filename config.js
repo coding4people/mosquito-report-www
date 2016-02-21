@@ -2,7 +2,7 @@
 
 module.exports = {
   api: {
-    baseUrl:'URL',
+    baseUrl:'http://api.mosquito.report',
     dateFormat: 'YYYY-MM-DD H:mm:ss'
   },
   gMapsToken: 'token',
