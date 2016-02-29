@@ -2,21 +2,16 @@
   height: 100%!important;
 }
 
-.btn-add-focus {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 0;
-}
-
 .btn-my-location {
   position: fixed;
   bottom: 100px;
   right: 50px;
   font-size: 40px;
+  width: 77px;
+  border-radius: 46px;
   .icon {
     position: relative;
     top: 3px;
+    color: $brand-primary;
   }
 }

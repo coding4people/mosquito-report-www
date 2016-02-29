@@ -7,7 +7,7 @@ export default class MapService {
 
   getZoneFocus(latitude, longitude) {
     // TODO @infodark -- change this to square method
-    return this.Restangular.one(`focus/query`).customPOST({
+    return this.Restangular.one(`focus/query-center`).customPOST({
       latlon: `${latitude},${longitude}`
     });
   }

@@ -12,6 +12,8 @@ describe('MainController', function() {
   describe('getCurrentPosition()', function() {
     var NavigatorGeolocation;
     var MapService;
+    var Messages;
+    var toastr;
     var $q;
     var deferredNavigatorGeolocation;
     var deferredMapService;
@@ -22,16 +24,19 @@ describe('MainController', function() {
       }
     };
 
-    beforeEach(inject(function (_$q_, _NavigatorGeolocation_, _MapService_) {
+    beforeEach(inject(function (_$q_, _NavigatorGeolocation_, _MapService_, _Messages_, _toastr_) {
       NavigatorGeolocation= _NavigatorGeolocation_;
       MapService = _MapService_;
       $q = _$q_;
+      Messages = _Messages_;
+      toastr = _toastr_;
 
       deferredNavigatorGeolocation = $q.defer();
       deferredMapService = $q.defer();
 
       spyOn(NavigatorGeolocation, 'getCurrentPosition').and.returnValue(deferredNavigatorGeolocation.promise);
       spyOn(MapService, 'getZoneFocus').and.returnValue(deferredMapService.promise);
+      spyOn(toastr, 'error');
     }));
 
     it('should be defined', function() {
@@ -48,6 +53,16 @@ describe('MainController', function() {
       deferredMapService.resolve();
       $scope.$digest();
       expect(controller.isLoading).toBeFalsy();
+    });
+
+    it('should try to get current position, toastr error need to be called', function () {
+      controller.getCurrentPosition();
+      deferredNavigatorGeolocation.resolve(position);
+      $scope.$digest();
+      deferredMapService.reject();
+      $scope.$digest();
+      expect(controller.isLoading).toBeFalsy();
+      expect(toastr.error).toHaveBeenCalledWith(Messages.toastr.error._MAP_QUERY_FOCUS_ERROR_);
     });
   });
 });

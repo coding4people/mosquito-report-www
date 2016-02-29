@@ -1,6 +1,12 @@
 .section-content {
   height: 100vh;
-  .section-container {
+  .section-container, .section-form {
     height: 100vh;
+  }
+  .section-form {
+    background: #f0f0f1;
+    .form-wrapper {
+      padding-top: 100px;
+    }
   }
 }

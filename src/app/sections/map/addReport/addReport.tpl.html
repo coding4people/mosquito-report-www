@@ -1,5 +1,24 @@
 <div class="section-container">
-
-  <h1>addReport</h1>
-
+  <section class="section-form">
+    <form class="form-wrapper col-sm-12" action="" novalidate>
+      <div class="form-group">
+        <a href="" class="upload-image">{{ 'sections.addReport.uploadImage' | translate }}</a>
+        <span class="upload-image-text">Image aren't required.</span>
+      </div>
+      <div class="form-group has-feedback">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Address">
+        <a class="form-control-feedback">
+          <i class="icon icon-near-me"></i>
+        </a>
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea id="notes" class="form-control" rows="3"></textarea>
+      </div>
+      <a class="btn btn-primary btn-lg btn-affix" ui-sref="sections.addReport">
+        {{ 'sections.addReport.saveReport' | translate }}
+      </a>
+    </form>
+  </section>
 </div>
