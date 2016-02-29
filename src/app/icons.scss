@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icons";
-  src: url('../assets/fonts/icons9634.eot');
-  src: url('../assets/fonts/icons9634.eot?#iefix') format('eot'),
-  url('../assets/fonts/icons9634.woff') format('woff'),
-  url('../assets/fonts/icons9634.ttf') format('truetype'),
-  url('../assets/fonts/icons9634.svg#icons9634') format('svg');
+  src: url('../assets/fonts/icons210.eot');
+  src: url('../assets/fonts/icons210.eot?#iefix') format('eot'),
+  url('../assets/fonts/icons210.woff') format('woff'),
+  url('../assets/fonts/icons210.ttf') format('truetype'),
+  url('../assets/fonts/icons210.svg#icons210') format('svg');
 }
 
 .icon {
@@ -51,14 +51,17 @@ $char: "\E00B";
 @if $filename == my-location {
 $char: "\E00C";
 }
-@if $filename == right {
+@if $filename == near-me {
 $char: "\E00D";
 }
-@if $filename == settings {
+@if $filename == right {
 $char: "\E00E";
 }
-@if $filename == web {
+@if $filename == settings {
 $char: "\E00F";
+}
+@if $filename == web {
+$char: "\E010";
 }
 
 @return $char;
@@ -105,6 +108,9 @@ $char: "\E00F";
 }
 .icon-my-location {
   @include icon(my-location);
+}
+.icon-near-me {
+  @include icon(near-me);
 }
 .icon-right {
   @include icon(right);
