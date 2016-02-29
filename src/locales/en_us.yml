@@ -2,4 +2,10 @@ mosquito:
   sections:
     map:
       addFocus: 'Add a Focus Report'
-
+    addReport:
+      title: 'Add a Focus Report'
+      saveReport: 'Save this Focus Report'
+      uploadImage: 'add an image'
+  toastr:
+    error:
+      _MAP_QUERY_FOCUS_ERROR_: 'Oops, we can''t complete your request :('
