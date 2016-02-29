@@ -1,0 +1,11 @@
+.form-control {
+  padding: 12px;
+  box-shadow: none;
+  height: auto;
+
+  &:focus {
+    border: 1px solid $brand-primary;
+    @include box-shadow(none);
+    outline: none;
+  }
+}
