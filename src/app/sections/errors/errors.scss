@@ -1,0 +1,33 @@
+.error-section {
+  .error-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .error-title {
+    font-size: 100px;
+    font-weight: 600;
+    color: #272829;
+    text-shadow: 1px 1px 0 #393a3c, -1px -1px 0 #222;
+  }
+  .error-description {
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 25px 0;
+  }
+  .error-back-link {
+    font-weight: lighter;
+    text-align: center;
+    display: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+    .icon {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+}
