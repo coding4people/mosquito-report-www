@@ -1,7 +1,10 @@
 <ui-view class="authentication section-form">
-  <form name="signInController.form" ng-submit="" class="form-wrapper col-sm-12" novalidate>
-    <div class="form-group">
-      <label for="email">Email</label>
+  <form name="signInController.form"
+        ng-submit="signInController.submit(signInController.form.$valid)"
+        class="form-wrapper col-sm-12"
+        novalidate>
+    <div class="form-group" ms-form-group-error>
+      <label for="email">{{ 'sections.authentication.signIn.email' | translate }}</label>
       <input name="email"
              type="email"
              ng-model="signInController.fields.email"
@@ -9,8 +12,8 @@
              id="email"
              ng-required="true">
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
+    <div class="form-group" ms-form-group-error>
+      <label for="password">{{ 'sections.authentication.signIn.password' | translate }}</label>
       <input name="password"
              type="password"
              ng-model="signInController.fields.rawPassword"
@@ -18,6 +21,9 @@
              id="password"
              ng-required="true">
     </div>
-    <button class="btn btn-primary btn-lg btn-affix">Sign In</button>
+    <button class="btn btn-primary btn-lg btn-affix">
+      <span ng-if="!signInController.isLoading">{{ 'sections.authentication.signIn.signInButton' | translate }}</span>
+      <span ng-if="signInController.isLoading">{{ 'sections.authentication.signIn.loadingText' | translate }}</span>
+    </button>
   </form>
 </ui-view>

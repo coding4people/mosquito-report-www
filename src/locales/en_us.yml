@@ -1,11 +1,21 @@
 mosquito:
   sections:
+    authentication:
+      signIn:
+        email: 'Email'
+        password: 'Password'
+        signInButton: 'Sign In'
+        loadingText: 'Loading...'
     map:
       addFocus: 'Add a Focus Report'
     addReport:
       title: 'Add a Focus Report'
       saveReport: 'Save this Focus Report'
       uploadImage: 'add an image'
+  formErrors:
+    required: 'This field is required.'
+    email: 'This needs to be a valid email'
+    compareTo: 'This needs to be same as the previous entry'
   toastr:
     error:
       _MAP_QUERY_FOCUS_ERROR_: 'Oops, we can''t complete your request :('
