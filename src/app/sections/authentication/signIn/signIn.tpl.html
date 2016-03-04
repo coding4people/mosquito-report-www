@@ -1,5 +1,23 @@
-<ui-view class="authentication section-content">
-  <a class="btn btn-primary btn-lg btn-affix" ui-sref="sections.addReport">
-    Sign up
-  </a>
+<ui-view class="authentication section-form">
+  <form name="signInController.form" ng-submit="" class="form-wrapper col-sm-12" novalidate>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input name="email"
+             type="email"
+             ng-model="signInController.fields.credentials.email"
+             class="form-control"
+             id="email"
+             ng-required="true">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input name="password"
+             type="password"
+             ng-model="signInController.fields.credentials.rawPassword"
+             class="form-control"
+             id="password"
+             ng-required="true">
+    </div>
+    <button class="btn btn-primary btn-lg btn-affix">Sign In</button>
+  </form>
 </ui-view>
