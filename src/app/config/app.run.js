@@ -1,4 +1,4 @@
-export default function runBlock ($rootScope, $state, $stateParams, Config, CurrentLocale, $location, $ngBootbox, Restangular, LocalStorageService, SignInService) {
+export default function runBlock ($rootScope, $state, $stateParams, Config, CurrentLocale, $location, $ngBootbox, Restangular, LocalStorageService, SignInService, $log) {
   'ngInject';
 
   $rootScope.config = Config;
