@@ -7,9 +7,9 @@ describe('MainController', function() {
     controller = $controller('SignInController');
   }));
 
-  describe('x()', function() {
-    it('should return true', function() {
-      expect(controller.x()).toBe(true);
+  describe('submit()', function() {
+    it('should be defined', function() {
+      expect(controller.submit).toBeDefined();
     });
   });
 

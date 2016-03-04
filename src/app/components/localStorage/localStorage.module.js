@@ -1,4 +1,4 @@
 import LocalStorageService from './localStorage.service.js';
 
-export default angular.module('vanidayMerchant.components.localStorage', [])
+export default angular.module('mosquito.components.localStorage', [])
   .service('LocalStorageService', LocalStorageService);

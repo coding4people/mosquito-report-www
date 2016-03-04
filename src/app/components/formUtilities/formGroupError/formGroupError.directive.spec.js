@@ -6,6 +6,8 @@ describe('FormGroupErrorDirective', function () {
   var $compile;
   var $rootScope;
 
+  beforeEach(module('mosquito'));
+
   beforeEach(inject(function(_$rootScope_,_$compile_, _$log_) {
     $rootScope = _$rootScope_;
     $compile = _$compile_;
@@ -13,7 +15,7 @@ describe('FormGroupErrorDirective', function () {
 
     spyOn($log, 'error');
 
-    directiveTpl = '<div class="form-group" vm-form-group-error>' +
+    directiveTpl = '<div class="form-group" ms-form-group-error>' +
                      '<label for="password">Password</label>' +
                      '<input name="rawPassword"' +
                             'type="text"' +

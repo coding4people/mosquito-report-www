@@ -2,6 +2,8 @@ describe('LocalStorageService', function() {
   var LocalStorageService;
   var $window;
 
+  beforeEach(module('mosquito'));
+
   beforeEach(inject(function(_LocalStorageService_, _$window_) {
     LocalStorageService = _LocalStorageService_;
     $window = _$window_;
