@@ -1,22 +1,18 @@
 export default class SignInController {
-  constructor($scope, $rootScope, SignInService, toastr, $stateParams, $location, $state, Messages) {
+  constructor(SignInService, toastr, $stateParams, $location, $state) {
     'ngInject';
 
     this.fields = {
-      credentials: {
-        email: null,
-        rawPassword: null
-      }
+      email: null,
+      password: null
     };
-    this.$scope = $scope;
+
     this.SignInService = SignInService;
     this.toastr = toastr;
     this.isLoading = false;
     this.redirectTo = $stateParams.redirect;
     this.$location = $location;
     this.$state = $state;
-    this.$rootScope = $rootScope;
-    this.Messages = Messages;
   }
 
   submit(isValid) {
