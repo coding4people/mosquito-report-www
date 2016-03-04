@@ -2,6 +2,7 @@ mosquito:
   sections:
     authentication:
       signIn:
+        title: 'Sign In'
         email: 'Email'
         password: 'Password'
         signInButton: 'Sign In'
