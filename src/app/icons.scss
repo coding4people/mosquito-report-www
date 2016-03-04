@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icons";
-  src: url('../assets/fonts/icons210.eot');
-  src: url('../assets/fonts/icons210.eot?#iefix') format('eot'),
-  url('../assets/fonts/icons210.woff') format('woff'),
-  url('../assets/fonts/icons210.ttf') format('truetype'),
-  url('../assets/fonts/icons210.svg#icons210') format('svg');
+  src: url('../assets/fonts/icons2432.eot');
+  src: url('../assets/fonts/icons2432.eot?#iefix') format('eot'),
+  url('../assets/fonts/icons2432.woff') format('woff'),
+  url('../assets/fonts/icons2432.ttf') format('truetype'),
+  url('../assets/fonts/icons2432.svg#icons2432') format('svg');
 }
 
 .icon {
@@ -30,38 +30,41 @@ $char: "\E004";
 @if $filename == dots-vertical {
 $char: "\E005";
 }
-@if $filename == file-document-box {
+@if $filename == facebook-box {
 $char: "\E006";
 }
-@if $filename == format-list-numbers {
+@if $filename == file-document-box {
 $char: "\E007";
 }
-@if $filename == keyboard-backspace {
+@if $filename == format-list-numbers {
 $char: "\E008";
 }
-@if $filename == left {
+@if $filename == keyboard-backspace {
 $char: "\E009";
 }
-@if $filename == magnify {
+@if $filename == left {
 $char: "\E00A";
 }
-@if $filename == menu {
+@if $filename == magnify {
 $char: "\E00B";
 }
-@if $filename == my-location {
+@if $filename == menu {
 $char: "\E00C";
 }
-@if $filename == near-me {
+@if $filename == my-location {
 $char: "\E00D";
 }
-@if $filename == right {
+@if $filename == near-me {
 $char: "\E00E";
 }
-@if $filename == settings {
+@if $filename == right {
 $char: "\E00F";
 }
-@if $filename == web {
+@if $filename == settings {
 $char: "\E010";
+}
+@if $filename == web {
+$char: "\E011";
 }
 
 @return $char;
@@ -87,6 +90,9 @@ $char: "\E010";
 }
 .icon-dots-vertical {
   @include icon(dots-vertical);
+}
+.icon-facebook-box {
+  @include icon(facebook-box);
 }
 .icon-file-document-box {
   @include icon(file-document-box);

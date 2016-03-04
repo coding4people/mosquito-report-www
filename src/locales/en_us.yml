@@ -7,6 +7,7 @@ mosquito:
         password: 'Password'
         signInButton: 'Sign In'
         loadingText: 'Loading...'
+        connectWithFacebook: 'Connect with Facebook'
     map:
       addFocus: 'Add a Focus Report'
     addReport:
