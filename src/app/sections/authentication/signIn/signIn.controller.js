@@ -1,5 +1,5 @@
 export default class SignInController {
-  constructor(SignInService, toastr, $stateParams, $location, $state) {
+  constructor(SignInService, toastr, $stateParams, $location, $state, Messages) {
     'ngInject';
 
     this.fields = {
@@ -13,11 +13,20 @@ export default class SignInController {
     this.redirectTo = $stateParams.redirect;
     this.$location = $location;
     this.$state = $state;
+    this.Messages = Messages;
   }
 
   submit(isValid) {
     if(isValid) {
-      this.SignInService.submitLogin(this.fields);
+      this.isLoading = true;
+      this.SignInService.submitLogin(this.fields)
+        .then(() => {
+          this.redirect();
+          this.isLoading = false;
+        }, () => {
+          this.isLoading = false;
+          this.toastr.error(this.Messages.toastr.error._INVALID_CREDENTIALS_ERROR_);
+        });
     }
   }
 

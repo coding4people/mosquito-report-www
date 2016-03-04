@@ -18,4 +18,5 @@ mosquito:
     compareTo: 'This needs to be same as the previous entry'
   toastr:
     error:
+      _INVALID_CREDENTIALS_ERROR_: 'Invalid Credentials'
       _MAP_QUERY_FOCUS_ERROR_: 'Oops, we can''t complete your request :('
