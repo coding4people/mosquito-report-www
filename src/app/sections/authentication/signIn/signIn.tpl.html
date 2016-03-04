@@ -1,7 +1,10 @@
 <ui-view class="authentication section-form">
   <form name="signInController.form"
+        us-spinner
+        spinner-on="signInController.isLoading"
         ng-submit="signInController.submit(signInController.form.$valid)"
         class="form-wrapper col-sm-12"
+        ng-class="{'loading': signInController.isLoading}"
         novalidate>
     <div class="form-group" ms-form-group-error>
       <label for="email">{{ 'sections.authentication.signIn.email' | translate }}</label>
@@ -16,7 +19,7 @@
       <label for="password">{{ 'sections.authentication.signIn.password' | translate }}</label>
       <input name="password"
              type="password"
-             ng-model="signInController.fields.rawPassword"
+             ng-model="signInController.fields.password"
              class="form-control"
              id="password"
              ng-required="true">
