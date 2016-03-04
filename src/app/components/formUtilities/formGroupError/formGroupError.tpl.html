@@ -1,0 +1,8 @@
+<ng-transclude></ng-transclude>
+<div ng-if="inputTouched"
+     ng-messages="form[inputElement.name].$error"
+     class="help-block messages">
+  <p ng-message="required">{{ 'formErrors.required' | translate }}</p>
+  <p ng-message="email">{{ 'formErrors.email' | translate }}</p>
+  <p ng-message="compareTo">{{ 'formErrors.compareTo' | translate }}</p>
+</div>
