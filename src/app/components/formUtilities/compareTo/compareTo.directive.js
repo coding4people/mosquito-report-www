@@ -4,7 +4,7 @@ export default function CompareToDirective() {
   let directive = {
     require: 'ngModel',
     scope: {
-      modelToCompare: '=vmCompareTo'
+      modelToCompare: '=msCompareTo'
     },
     link: function(scope, element, attributes, ngModel) {
       ngModel.$validators.compareTo = function(modelValue) {
