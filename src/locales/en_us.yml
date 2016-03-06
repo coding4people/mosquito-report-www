@@ -31,4 +31,5 @@ mosquito:
   toastr:
     error:
       _INVALID_CREDENTIALS_ERROR_: 'Invalid Credentials'
+      _SIGNUP_ERROR_: 'Try again!'
       _MAP_QUERY_FOCUS_ERROR_: 'Oops, we can''t complete your request :('
