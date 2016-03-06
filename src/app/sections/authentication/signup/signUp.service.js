@@ -11,9 +11,9 @@ export default class SignUpService {
 
     this.Restangular.all('/signup/email')
       .customPOST(fields)
-      .then(result => {
-        deferred.resolve(result.data);
-      }, result => deferred.reject(result.data));
+      .then(() => {
+        deferred.resolve();
+      }, error => deferred.reject(error));
 
     return deferred.promise;
   }
