@@ -13,7 +13,7 @@ export default function routerConfig ($stateProvider, CurrentLocaleProvider) {
         'authentication-section': {
           templateUrl: `app/sections/authentication/signUp/signUp.${lang}.html`,
           controller: 'SignUpController',
-          controllerAs: 'signupController'
+          controllerAs: 'signUpController'
         }
       }
     });

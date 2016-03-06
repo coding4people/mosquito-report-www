@@ -22,7 +22,7 @@
       <label for="email">{{ 'sections.authentication.signUp.firstName' | translate }}</label>
       <input name="firstName"
              type="text"
-             ng-model="signUpController.fields.firstName"
+             ng-model="signUpController.fields.firstname"
              class="form-control"
              id="firstName"
              ng-required="true">
@@ -31,7 +31,7 @@
       <label for="email">{{ 'sections.authentication.signUp.lastName' | translate }}</label>
       <input name="lastName"
              type="text"
-             ng-model="signUpController.fields.lastName"
+             ng-model="signUpController.fields.lastname"
              class="form-control"
              id="lastName"
              ng-required="true">
@@ -50,7 +50,7 @@
       <input ms-compare-to="signUpController.fields.password"
              name="passwordConfirm"
              type="password"
-             ng-model="signUpController.fields.passwordConfirm"
+             ng-model="signUpController.passwordConfirm"
              class="form-control"
              ng-required="true"
              id="passwordConfirm">

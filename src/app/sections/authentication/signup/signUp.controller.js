@@ -4,8 +4,8 @@ export default class SignUpController {
 
     this.fields = {
       email: null,
-      firstName: null,
-      lastName: null,
+      firstname: null,
+      lastname: null,
       password: null
     };
 
