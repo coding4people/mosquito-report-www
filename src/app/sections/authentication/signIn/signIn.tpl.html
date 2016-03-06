@@ -27,6 +27,7 @@
              id="password"
              ng-required="true">
     </div>
+    <p>{{ 'sections.authentication.signIn.accountSignUp' | translate }}, <a href ui-sref="authentication.signUp">{{ 'sections.authentication.signIn.signUpLink' | translate }}</a></p>
     <button class="btn btn-primary btn-lg btn-affix">
       <span ng-if="!signInController.isLoading">{{ 'sections.authentication.signIn.signInButton' | translate }}</span>
       <span ng-if="signInController.isLoading">{{ 'sections.authentication.signIn.loadingText' | translate }}</span>

@@ -8,6 +8,8 @@ mosquito:
         signInButton: 'Sign In'
         loadingText: 'Loading...'
         connectWithFacebook: 'Connect with Facebook'
+        accountSignUp: 'If you don’t have an account'
+        signUpLink: 'Sign up'
     map:
       addFocus: 'Add a Focus Report'
     addReport:
