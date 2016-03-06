@@ -1,4 +1,4 @@
-export default class ServicesController {
+export default class SignUpController {
   constructor() {
     'ngInject';
   }
