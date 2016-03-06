@@ -10,6 +10,14 @@ mosquito:
         connectWithFacebook: 'Connect with Facebook'
         accountSignUp: 'If you don’t have an account'
         signUpLink: 'Sign up'
+      signUp:
+        title: 'Sign Up'
+        email: 'Email'
+        connectWithFacebook: 'Connect with Facebook'
+        firstName: 'First name'
+        lastName: 'Last name'
+        password: 'Password'
+        confirmPassword: 'Confirm Password'
     map:
       addFocus: 'Add a Focus Report'
     addReport:
