@@ -9,6 +9,7 @@ import routerConfig from './app.route';
 import runBlock from './app.run';
 import ngBootboxConfig from './app.ngBootbox.config';
 import momentLocaleConfig from './app.moment.config';
+import facebookConfig from './app.facebook.config';
 
 export default angular.module('mosquito.config', [])
   .constant('_', _)
@@ -22,5 +23,6 @@ export default angular.module('mosquito.config', [])
   .config(restangularConfig)
   .config(spinnerConfig)
   .config(ngBootboxConfig)
+  .config(facebookConfig)
   .run(runBlock);
 

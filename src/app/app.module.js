@@ -18,6 +18,7 @@ angular.module('mosquito', [
   'angularSpinner',
   'ngBootbox',
   'ngMap',
+  'facebook',
   config.name,
   components.name,
   sections.name

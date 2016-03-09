@@ -5,6 +5,7 @@ module.exports = {
     baseUrl:'http://api.mosquito.report',
     dateFormat: 'YYYY-MM-DD H:mm:ss'
   },
+  facebookToken: '139600776429194',
   gMapsToken: 'token',
   debug: 'true',
   environment: 'LOCAL',

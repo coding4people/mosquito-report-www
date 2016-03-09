@@ -7,7 +7,7 @@
         ng-class="{'loading': signInController.isLoading}"
         novalidate>
     <div class="form-group">
-      <a href="" class="btn btn-primary btn-block btn-facebook">{{ 'sections.authentication.signIn.connectWithFacebook' | translate }}</a>
+      <ms-connect-with-facebook></ms-connect-with-facebook>
     </div>
     <div class="form-group" ms-form-group-error>
       <label for="email">{{ 'sections.authentication.signIn.email' | translate }}</label>

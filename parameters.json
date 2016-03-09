@@ -1,6 +1,7 @@
 {
   "FRONT_API_URL":          "http://api.mosquito.report",
   "GMAPS_TOKEN":            "token",
+  "FACEBOOK_TOKEN":         "139600776429194",
   "ENVIRONMENT":            "LOCAL",
   "DEBUG":                  "true"
 }

@@ -33,3 +33,4 @@ mosquito:
       _INVALID_CREDENTIALS_ERROR_: 'Invalid Credentials'
       _SIGNUP_ERROR_: 'Try again!'
       _MAP_QUERY_FOCUS_ERROR_: 'Oops, we can''t complete your request :('
+      _FACEBOOK_SIGNIN_ERROR_: 'Oops, something isn''t right, try again!'

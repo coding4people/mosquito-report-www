@@ -5,6 +5,7 @@ module.exports = {
     baseUrl:'@@FRONT_API_URL',
     dateFormat: 'YYYY-MM-DD H:mm:ss'
   },
+  facebookToken: '@@FACEBOOK_TOKEN',
   gMapsToken: '@@GMAPS_TOKEN',
   debug: '@@DEBUG',
   environment: '@@ENVIRONMENT',
