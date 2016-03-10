@@ -3,3 +3,35 @@ $background-color: #f0f0f1;
 .authentication {
   background: $background-color;
 }
+
+.info-text {
+  padding: 10px 0;
+  text-align: center;
+  background-color: $background-color;
+  .info-text-or {
+    margin: 20px 0;
+    min-height: 20px;
+    position: relative;
+    .text-disclaimer {
+      color: #878787;
+    }
+    .line {
+      position: absolute;
+      width: 100%;
+      border-top: 1px solid $upper-light-grey;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    .text-or {
+      padding: 0 20px;
+      background-color: $background-color;
+      color: $black;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      font-weight: $font-weight-bold;
+    }
+  }
+}

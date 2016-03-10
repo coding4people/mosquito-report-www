@@ -1,6 +1,16 @@
-<div class="header-user">
-  <a href="" ui-sref="sections.map" class="btn-close pull-left">
-    <i class="icon icon-keyboard-backspace"></i>
-  </a>
-  <h3 class="title text-center">{{ 'sections.authentication.signIn.title' | translate }}</h3>
+<div class="header-user-wrapper">
+  <div class="header-user">
+    <a href="" ui-sref="sections.map" class="btn-close pull-left">
+      <i class="icon icon-keyboard-backspace"></i>
+    </a>
+    <h3 class="title text-center">{{ 'sections.authentication.signIn.title' | translate }}</h3>
+  </div>
+  <ms-connect-with-facebook></ms-connect-with-facebook>
+  <div class="info-text">
+    <p class="text-disclaimer">Don’t worry, we never post on your behalf.</p>
+    <div class="info-text-or">
+      <span class="line"></span>
+      <p class="text-or">Or with your email</p>
+    </div>
+  </div>
 </div>
