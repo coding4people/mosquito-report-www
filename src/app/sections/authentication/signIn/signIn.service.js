@@ -20,7 +20,7 @@ export default class SignInService {
       .then(result => {
         this.LocalStorageService.setObject('user', result);
         this.LoginModel.setLoginData(result.plain());
-        this.$rootScope.headers['Authorization'] = this.LoginModel.auth.token;
+        this.$rootScope.headers['Authorization'] = this.LoginModel.token;
         deferred.resolve(result.data);
       }, result => deferred.reject(result.data));
 
