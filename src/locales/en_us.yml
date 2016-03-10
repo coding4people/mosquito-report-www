@@ -10,6 +10,9 @@ mosquito:
         connectWithFacebook: 'Connect with Facebook'
         accountSignUp: 'If you don’t have an account'
         signUpLink: 'Sign up'
+        infoText:
+          disclaimer: 'Don’t worry, we never post on your behalf.'
+          orText: 'Or with your email'
       signUp:
         title: 'Sign Up'
         email: 'Email'
@@ -18,6 +21,9 @@ mosquito:
         lastName: 'Last name'
         password: 'Password'
         confirmPassword: 'Confirm Password'
+        infoText:
+          disclaimer: 'Don’t worry, we never post on your behalf.'
+          orText: 'Or'
     map:
       addFocus: 'Add a Focus Report'
     addReport:
