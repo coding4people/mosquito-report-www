@@ -14,6 +14,7 @@ export default class MapController {
     this.position = null;
     this._ = _;
     this.NgMap = NgMap;
+    this.$scope = $scope;;
 
     this.getCurrentPosition();
   }
@@ -43,5 +44,8 @@ export default class MapController {
     }
 
     that.pinSelected = that.positions[pos];
+    that.pinSelected.lat = that.positions[pos].latlon.split(',')[0];
+    that.pinSelected.lng = that.positions[pos].latlon.split(',')[1];
+    that.$scope.$digest();
   }
 }

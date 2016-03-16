@@ -25,7 +25,9 @@
   </a>
 
   <div ng-if="mapController.showPinInfoToggle" class="info-focus-pin">
-    <strong>{{mapController.pinSelected.name}}</strong>
+    <strong>
+      <ms-reverse-geocode lat="mapController.pinSelected.lat" lng="mapController.pinSelected.lng"></ms-reverse-geocode>
+    </strong>
     <p>{{mapController.pinSelected.notes}}</p>
   </div>
 </div>
