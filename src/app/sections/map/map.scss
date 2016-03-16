@@ -6,12 +6,20 @@
   position: fixed;
   bottom: 100px;
   right: 50px;
-  font-size: 40px;
-  width: 77px;
-  border-radius: 46px;
+  width: 60px;
+  border-radius: 100%;
   .icon {
     position: relative;
-    top: 3px;
+    top: 0;
     color: $brand-primary;
   }
+}
+
+.info-focus-pin {
+  padding: 10px;
+  background: $white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
 }

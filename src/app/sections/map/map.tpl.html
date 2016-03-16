@@ -5,7 +5,15 @@
   <ng-map class="section-map"
           styles="{{mapController.mapStyle}}"
           disable-default-u-i="true"
+          zoom-to-include-markers="auto"
           center="[{{mapController.position.coords.latitude}},{{mapController.position.coords.longitude}}]">
+    <marker ng-repeat="(id, pos) in mapController.positions"
+            icon="{url:'assets/images/app/marker.png'}"
+            on-click="mapController.showPinInfo(event, id)"
+            position="{{pos.latlon}}"></marker>
+    <marker position="[{{mapController.position.coords.latitude}},{{mapController.position.coords.longitude}}]"
+            icon="{url:'assets/images/app/current-position-marker.png'}"
+            centered="true"></marker>
   </ng-map>
 
   <a class="btn btn-circle btn-my-location" ng-click="mapController.getCurrentPosition()">
@@ -15,4 +23,9 @@
   <a class="btn btn-primary btn-lg btn-affix" ui-sref="sections.addReport">
     {{ 'sections.map.addFocus' | translate }}
   </a>
+
+  <div ng-if="mapController.showPinInfoToggle" class="info-focus-pin">
+    <strong>{{mapController.pinSelected.name}}</strong>
+    <p>{{mapController.pinSelected.notes}}</p>
+  </div>
 </div>

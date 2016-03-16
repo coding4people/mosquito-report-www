@@ -1,6 +1,9 @@
+let that;
+
 export default class MapController {
-  constructor(NgMap, MapService, MapHelperService, NavigatorGeolocation, toastr, Messages, _) {
+  constructor($scope, NgMap, MapService, MapHelperService, NavigatorGeolocation, toastr, Messages, _) {
     'ngInject';
+    that = this;
 
     this.mapStyle = MapHelperService.getMapStyle();
     this.MapService = MapService;
@@ -25,7 +28,8 @@ export default class MapController {
         _self.MapService.getZoneFocus(position.coords.latitude, position.coords.longitude)
           .then(data => {
             _self.isLoading = false;
-            _self.plotMarkers(data);
+            //_self.plotMarkers(data);
+            _self.positions = data.plain();
           }, () => {
             _self.toastr.error(_self.Messages.toastr.error._MAP_QUERY_FOCUS_ERROR_);
             _self.isLoading = false;
@@ -33,17 +37,11 @@ export default class MapController {
       });
   }
 
-  plotMarkers(data) {
-    let _self = this;
-    _self.dynMarkers = [];
+  showPinInfo(event, pos) {
+    if(!that.showPinInfoToggle) {
+      that.showPinInfoToggle = true;
+    }
 
-    this.NgMap.getMap().then(map => {
-      this._.each(data.hits.hit, item => {
-        var latLng = new google.maps.LatLng(item.fields.latlon[0].split(',')[0], item.fields.latlon[0].split(',')[1]);
-        _self.dynMarkers.push(new google.maps.Marker({position:latLng}));
-      });
-
-      _self.markerClusterer = new MarkerClusterer(map, _self.dynMarkers, {});
-    });
+    that.pinSelected = that.positions[pos];
   }
 }
