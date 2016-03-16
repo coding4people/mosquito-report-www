@@ -30,7 +30,7 @@ export default class SignInService {
   getProfile() {
     let deferred = this.$q.defer();
 
-    if(this.LoginModel.auth.token){
+    if(this.LoginModel.token){
       deferred.resolve(this.LoginModel);
     } else if(this.LocalStorageService.get('user')){
       deferred.resolve(this.LocalStorageService.getObject('user'));

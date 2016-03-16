@@ -2,7 +2,7 @@ export default function routerConfig ($stateProvider) {
   'ngInject';
 
   var UserNotLoggedIn = function (user, params, location) {
-    if (!user.auth.token) {
+    if (!user.token) {
       return {to: 'authentication.signIn', params: {redirect: decodeURIComponent(location)}};
     }
   };
