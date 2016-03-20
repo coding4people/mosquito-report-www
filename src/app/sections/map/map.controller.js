@@ -14,7 +14,7 @@ export default class MapController {
     this.position = null;
     this._ = _;
     this.NgMap = NgMap;
-    this.$scope = $scope;;
+    this.$scope = $scope;
 
     this.getCurrentPosition();
   }
@@ -29,7 +29,6 @@ export default class MapController {
         _self.MapService.getZoneFocus(position.coords.latitude, position.coords.longitude)
           .then(data => {
             _self.isLoading = false;
-            //_self.plotMarkers(data);
             _self.positions = data.plain();
           }, () => {
             _self.toastr.error(_self.Messages.toastr.error._MAP_QUERY_FOCUS_ERROR_);
@@ -42,6 +41,9 @@ export default class MapController {
     if(!that.showPinInfoToggle) {
       that.showPinInfoToggle = true;
     }
+
+    that._.each(that.positions, item => item.icon = 'assets/images/app/marker.png');
+    that.positions[pos].icon = 'assets/images/app/marker-clicked.png';
 
     that.pinSelected = that.positions[pos];
     that.pinSelected.lat = that.positions[pos].latlon.split(',')[0];

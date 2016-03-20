@@ -1,0 +1,6 @@
+<div ng-if="pinInfoController.showPinInfoToggle" class="info-focus-pin">
+  <strong>
+    <ms-reverse-geocode lat="pinInfoController.pinSelected.lat" lng="pinInfoController.pinSelected.lng"></ms-reverse-geocode>
+  </strong>
+  <p>{{pinInfoController.pinSelected.notes}}</p>
+</div>

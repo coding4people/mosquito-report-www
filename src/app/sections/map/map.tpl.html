@@ -8,7 +8,7 @@
           zoom-to-include-markers="auto"
           center="[{{mapController.position.coords.latitude}},{{mapController.position.coords.longitude}}]">
     <marker ng-repeat="(id, pos) in mapController.positions"
-            icon="{url:'assets/images/app/marker.png'}"
+            icon="{{ pos.icon ? {url: pos.icon} : {url:'assets/images/app/marker.png'} }}"
             on-click="mapController.showPinInfo(event, id)"
             position="{{pos.latlon}}"></marker>
     <marker position="[{{mapController.position.coords.latitude}},{{mapController.position.coords.longitude}}]"
@@ -24,10 +24,5 @@
     {{ 'sections.map.addFocus' | translate }}
   </a>
 
-  <div ng-if="mapController.showPinInfoToggle" class="info-focus-pin">
-    <strong>
-      <ms-reverse-geocode lat="mapController.pinSelected.lat" lng="mapController.pinSelected.lng"></ms-reverse-geocode>
-    </strong>
-    <p>{{mapController.pinSelected.notes}}</p>
-  </div>
+  <ms-pin-info pin-selected="mapController.pinSelected" show-pin-info-toggle="mapController.showPinInfoToggle"></ms-pin-info>
 </div>
