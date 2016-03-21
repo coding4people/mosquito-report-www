@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icons";
-  src: url('../assets/fonts/icons3127.eot');
-  src: url('../assets/fonts/icons3127.eot?#iefix') format('eot'),
-  url('../assets/fonts/icons3127.woff') format('woff'),
-  url('../assets/fonts/icons3127.ttf') format('truetype'),
-  url('../assets/fonts/icons3127.svg#icons3127') format('svg');
+  src: url('../assets/fonts/icons1035.eot');
+  src: url('../assets/fonts/icons1035.eot?#iefix') format('eot'),
+  url('../assets/fonts/icons1035.woff') format('woff'),
+  url('../assets/fonts/icons1035.ttf') format('truetype'),
+  url('../assets/fonts/icons1035.svg#icons1035') format('svg');
 }
 
 .icon {
@@ -63,8 +63,11 @@ $char: "\E00F";
 @if $filename == settings {
 $char: "\E010";
 }
-@if $filename == web {
+@if $filename == thumb-up {
 $char: "\E011";
+}
+@if $filename == web {
+$char: "\E012";
 }
 
 @return $char;
@@ -123,6 +126,9 @@ $char: "\E011";
 }
 .icon-settings {
   @include icon(settings);
+}
+.icon-thumb-up {
+  @include icon(thumb-up);
 }
 .icon-web {
   @include icon(web);

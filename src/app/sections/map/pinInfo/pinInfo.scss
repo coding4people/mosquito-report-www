@@ -1,0 +1,16 @@
+.info-focus-pin {
+  padding: 10px;
+  background: $white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  .holder-wrapper-focus {
+    position: relative;
+  }
+  .thumb-up-wrapper {
+    position: absolute;
+    right: 40px;
+    top: -60px;
+  }
+}

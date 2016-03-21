@@ -1,6 +1,13 @@
 <div ng-if="pinInfoController.showPinInfoToggle" class="info-focus-pin">
-  <strong>
-    <ms-reverse-geocode lat="pinInfoController.pinSelected.lat" lng="pinInfoController.pinSelected.lng"></ms-reverse-geocode>
-  </strong>
-  <p>{{pinInfoController.pinSelected.notes}}</p>
+  <div class="holder-wrapper-focus">
+    <h2>
+      <ms-reverse-geocode lat="pinInfoController.pinSelected.lat" lng="pinInfoController.pinSelected.lng"></ms-reverse-geocode>
+    </h2>
+    <p>{{pinInfoController.pinSelected.notes}}</p>
+    <div class="thumb-up-wrapper">
+      <a href="" class="btn btn-primary btn-circle">
+        <i class="icon icon-thumb-up"></i>
+      </a>
+    </div>
+  </div>
 </div>

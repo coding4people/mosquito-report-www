@@ -4,22 +4,11 @@
 
 .btn-my-location {
   position: fixed;
-  bottom: 100px;
-  right: 50px;
-  width: 60px;
-  border-radius: 100%;
+  bottom: 160px;
+  background: $white;
   .icon {
     position: relative;
     top: 0;
     color: $brand-primary;
   }
-}
-
-.info-focus-pin {
-  padding: 10px;
-  background: $white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 2;
 }
