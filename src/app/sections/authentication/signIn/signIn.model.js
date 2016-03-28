@@ -1,11 +1,9 @@
 export default class SignInModel {
   constructor() {
-    this.auth = {};
-    this.user = {};
+    this.token = null;
   }
 
   setLoginData(data) {
-    this.auth = data.auth;
-    this.user = data.user;
+    this.token = data.token;
   }
 }

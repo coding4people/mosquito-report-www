@@ -8,7 +8,7 @@ export default function runBlock ($rootScope, $state, $stateParams, Config, Curr
   let user = LocalStorageService.getObject('user');
 
   $rootScope.headers = {
-    'Authorization': `Token ${user}`
+    'Authorization': `Token ${user.token}`
   };
 
   Restangular.setDefaultHeaders($rootScope.headers);
@@ -53,7 +53,7 @@ export default function runBlock ($rootScope, $state, $stateParams, Config, Curr
       return true;
     }
 
-    SignInService.getProfile().then(res => {
+    SignInService.getSession().then(res => {
       redirect(res, event, toState, toParams);
     });
   }

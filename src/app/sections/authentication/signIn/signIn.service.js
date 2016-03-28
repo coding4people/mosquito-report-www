@@ -20,14 +20,15 @@ export default class SignInService {
       .then(result => {
         this.LocalStorageService.setObject('user', result);
         this.LoginModel.setLoginData(result.plain());
-        this.$rootScope.headers['Authorization'] = this.LoginModel.token;
+        this.$rootScope.headers['Authorization'] = `Token ${this.LoginModel.token}`;
+        this.Restangular.setDefaultHeaders(this.$rootScope.headers);
         deferred.resolve(result.data);
       }, result => deferred.reject(result.data));
 
     return deferred.promise;
   }
 
-  getProfile() {
+  getSession() {
     let deferred = this.$q.defer();
 
     if(this.LoginModel.token){
@@ -37,6 +38,22 @@ export default class SignInService {
     } else {
       deferred.resolve(this.LoginModel);
     }
+
+    return deferred.promise;
+  }
+
+  submitLogout() {
+    let deferred = this.$q.defer();
+
+    this.LocalStorageService.remove('user');
+
+    this.getSession().then(user => {
+      if(!user.token) {
+        deferred.resolve();
+      } else {
+        deferred.reject();
+      }
+    });
 
     return deferred.promise;
   }

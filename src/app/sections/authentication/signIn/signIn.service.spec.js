@@ -59,35 +59,35 @@ describe('SignInService', function() {
     });
   });
 
-  describe('getProfile()', function () {
+  describe('getSession()', function () {
     afterEach(function () {
       LocalStorageService.remove('user');
     });
 
     it('should be defined', function () {
-      expect(SignInService.getProfile).toBeDefined();
+      expect(SignInService.getSession).toBeDefined();
     });
 
     it('if LoginModel.auth has been populated resolve the promise with it', function () {
       SignInService.LoginModel.auth = {token: 'some token'};
-      spyOn(SignInService, 'getProfile').and.returnValue(deferred.promise);
-      SignInService.getProfile();
+      spyOn(SignInService, 'getSession').and.returnValue(deferred.promise);
+      SignInService.getSession();
       deferred.resolve(SignInService.LoginModel);
       expect(SignInService.LoginModel).toBeDefined();
     });
 
     it('if LoginModel.auth hasn\'t been populated resolve the promise with localStorage', function () {
       LocalStorageService.setObject('user', {auth:{token: 'some token'}});
-      spyOn(SignInService, 'getProfile').and.returnValue(deferred.promise);
-      SignInService.getProfile();
+      spyOn(SignInService, 'getSession').and.returnValue(deferred.promise);
+      SignInService.getSession();
       deferred.resolve(SignInService.LoginModel);
       expect(LocalStorageService.getObject('user')).toBeDefined();
       LocalStorageService.remove('user');
     });
 
     it('if LoginModel.auth and LocalStorage doesn\'t return anything should be resolve promise with nullable attr', function () {
-      spyOn(SignInService, 'getProfile').and.returnValue(deferred.promise);
-      SignInService.getProfile();
+      spyOn(SignInService, 'getSession').and.returnValue(deferred.promise);
+      SignInService.getSession();
       deferred.resolve(SignInService.LoginModel);
       expect(SignInService.LoginModel.auth.token).not.toBeDefined();
     });

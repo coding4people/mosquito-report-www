@@ -7,7 +7,7 @@ export default function routerErrorsConfig ($stateProvider, CurrentLocaleProvide
   $urlRouterProvider.when('/', ($q, $state, SignInService) => {
     let deferred = $q.defer();
 
-    SignInService.getProfile().then(user => {
+    SignInService.getSession().then(user => {
       if(user.auth.token) {
         deferred.resolve($state.go('sections.map'));
       } else {
