@@ -1,0 +1,19 @@
+<div class="user-header-options">
+  <div class="public-actions" ng-show="!userHeaderOptionsController.isLogged">
+    <a href="" class="btn btn-link">SIGN IN</a>
+    <a href="" class="btn btn-link">SIGN UP</a>
+  </div>
+  <ul ng-show="userHeaderOptionsController.isLogged" class="nav navbar-nav navbar-right private-actions">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+        <span class="user-avatar">
+          <img class="img-responsive" src="/assets/images/app/img-person.jpg" alt="">
+        </span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a ng-click="userHeaderOptionsController.logout()">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
